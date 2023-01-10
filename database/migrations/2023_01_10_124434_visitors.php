@@ -16,14 +16,14 @@ class Visitors extends Migration
         Schema::create('visitors', function (Blueprint $table) {
             $table->id();
             $table->string('ip');
-            $table->string('hostname');
+            $table->string('hostname')->nullable();
             $table->string('city');
-            $table->string('region');
-            $table->string('country');
-            $table->string('loc');
-            $table->string('org');
-            $table->string('postal');
-            $table->string('timezone');
+            $table->string('region')->nullable();
+            $table->string('country')->nullable();
+            $table->string('loc')->nullable();
+            $table->string('org')->nullable();
+            $table->string('postal')->nullable();
+            $table->string('timezone')->nullable();
             $table->timestamps();
         });
     }

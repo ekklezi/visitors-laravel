@@ -23,3 +23,6 @@ Route::get('/dashboard',[VisitorController::class, 'index'])->middleware(['auth'
 require __DIR__.'/auth.php';
 
 Route::post('/visitor', [VisitorController::class, 'store']);
+
+Route::get('visitors/today', [VisitorController::class, 'today'])->middleware(['auth']);
+Route::get('visitors/city', [VisitorController::class, 'city'])->middleware(['auth']);
